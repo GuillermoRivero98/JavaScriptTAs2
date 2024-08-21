@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TA12 - TA22</title>
+</head>
+<body>
+
+    <!-- TA12: Generar contraseña -->
+    <label for="password-length">Largo de la contraseña:</label>
+    <input type="number" id="password-length" value="8" min="8">
+    <button onclick="displayGeneratedPassword()">Generar contraseña</button>
+    <p>Contraseña generada: <span id="generated-password"></span></p>
+
+    <!-- TA13: Cambiar texto -->
+    <p id="text-change">Texto original</p>
+    <button onclick="changeText()">Cambiar texto</button>
+
+    <!-- TA14 y TA15: Añadir y eliminar elementos de una lista -->
+    <ul id="item-list"></ul>
+    <input type="text" id="item-input" placeholder="Añadir elemento">
+    <button onclick="addItem()">Añadir elemento</button>
+    <button onclick="removeLastItem()">Eliminar último elemento</button>
+
+    <!-- TA16: Mostrar/Ocultar elemento -->
+    <p id="toggle-text">Este es un párrafo para mostrar y ocultar.</p>
+    <button onclick="toggleVisibility()">Mostrar/Ocultar</button>
+
+    <!-- TA17: Contador -->
+    <p>Contador: <span id="counter">0</span></p>
+    <button onclick="incrementCounter()">Incrementar</button>
+
+    <!-- TA18: Filtrar lista -->
+    <input type="text" id="filter-input" oninput="filterList()" placeholder="Filtrar lista">
+    <ul id="dynamic-list">
+        <li>Juan</li>
+        <li>María</li>
+        <li>Carlos</li>
+    </ul>
+
+    <!-- TA19: Validación de formulario -->
+    <form onsubmit="validateForm(event)">
+        <div>
+            <input type="text" id="name" placeholder="Nombre">
+            <span id="name-error" style="color:red;"></span>
+        </div>
+        <div>
+            <input type="password" id="password" placeholder="Contraseña">
+            <span id="password-error" style="color:red;"></span>
+        </div>
+        <div>
+            <input type="email" id="email" placeholder="Correo electrónico">
+            <span id="email-error" style="color:red;"></span>
+        </div>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <!-- TA20: Cambiar imagen al pasar el mouse -->
+    <img id="hover-image" src="1.jpg" alt="Imagen" onmouseover="changeImageOnHover()" onmouseout="restoreImage()">
+
+    <!-- TA21: Cambiar estilo de input -->
+    <input type="text" id="styled-input" onfocus="changeInputStyle()" onblur="restoreInputStyle()" placeholder="Input estilizado">
+
+    <!-- TA22: Detectar cambio de tamaño -->
+    <p id="window-size">Ancho: -, Alto: -</p>
+
+    <script src="script.js"></script>
+</body>
+</html>
